@@ -15,32 +15,30 @@ var placeholder = [];
 
 var domPlaceholder = document.querySelector("#placeholder");
 
+
+
 document.addEventListener("keyup", function() {
+        placeholder = [];
         for (var j = 0; j < correctLyric.length; j++) {
             placeholder.push(" - ");
-        };
-        for (var k = 0; k < correctLyric.length; k++) {
-            if (correctLyric[k] === placeholder[k]) {
-                correctLetters.push(correctLyric[k])
-            } else {
-                correctLetters.push(" - ");
-            }
         }
+        correctLetters = [];
         var guess = event.key;
         for (var i = 0; i < correctLyric.length; i++) {
-            correctLetters.push(correctLyric[i]);
             if (correctLyric[i] === guess) {
-                placeholder[i] = correctLyric[i]
+                correctGuess[i] = correctLyric[i];
             } else {
-                console.log("incorrect")
+                console.log("Incorrect Answer")
             }
         }
-        console.log("Placeholder Array: " + placeholder);
-        console.log("correctLetters Array: " + correctLetters);
+        console.log("correctGuess Array: " + correctGuess);
+        console.log("placeholder: " + placeholder)
 })
+
+
 
 
 // hooman-20 (Intro to Nested For-loops)
 // hooman-22 (Intro to .split())
-// hooman-27 (Intro to functions, typeof, charAt())
+// hooman-27 (Intro to functions, typeof, charAt()), indexof
 
