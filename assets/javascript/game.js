@@ -6,32 +6,40 @@ console.log("correctLyric: " + correctLyric);
 
 var wins = 0;
 var losses = 0;
-var guesses = 10;
-var correctGuess = [];
+var guessesRemain = 10;
 var correctLetters = [];
 var placeholder = [];
-
+var pressToPlay = false;
+ 
 var domPlaceholder = document.querySelector("#placeholder");
 
 for (var j = 0; j < correctLyric.length; j++) {
-    correctGuess.push(" - ");
+    correctLetters.push(" - ");
 }
 
-
 document.addEventListener("keyup", function() {
-        var guess = event.key;
-        for (var i = 0; i < correctLyric.length; i++) {
-            if (correctLyric[i] === guess) {
-                correctGuess[i] = guess;
+        var start = event.key.toLowerCase();
+        if (pressToPlay === true || start === "s") {
+            pressToPlay = true; 
+            var guess = event.key.toLowerCase();
+            for (var i = 0; i < correctLyric.length; i++) {
+                if (correctLyric[i] === guess) {
+                    correctLetters[i] = guess;
+                } else {
+                    guessesRemain = guessesRemain - 1
+                    console.log("guesses Remain: " + guessesRemain);
+                }
             }
+            console.log("correctLetters Array: " + correctLetters);
+        } else {
+            console.log("Please type 's' to Start")
         }
-        console.log("correctGuess Array: " + correctGuess);
 })
-
-
 
 
 // hooman-20 (Intro to Nested For-loops)
 // hooman-22 (Intro to .split())
 // hooman-27 (Intro to functions, typeof, charAt()), indexof
+
+//toLowerCase onto guess event.key
 
