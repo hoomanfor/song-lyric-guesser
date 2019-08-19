@@ -8,6 +8,8 @@ var wins = 0;
 var losses = 0;
 var guessesRemain = 10;
 var correctLetters = [];
+var incorrectLetters = [];
+var wrongGuess = false; 
 var placeholder = [];
 var pressToPlay = false;
  
@@ -26,11 +28,15 @@ document.addEventListener("keyup", function() {
                 if (correctLyric[i] === guess) {
                     correctLetters[i] = guess;
                 } else {
-                    guessesRemain = guessesRemain - 1
-                    console.log("guesses Remain: " + guessesRemain);
+                    wrongGuess = true;
                 }
             }
+            if (wrongGuess) {
+                console.log("wrong guess")
+                wrongGuess = false; 
+            }
             console.log("correctLetters Array: " + correctLetters);
+            console.log("incorrectLetters Array: " + incorrectLetters);
         } else {
             console.log("Please type 's' to Start")
         }
