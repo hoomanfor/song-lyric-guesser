@@ -30,8 +30,9 @@ document.addEventListener("keyup", function() {
                     correctLetters[i] = guess;
                 }
             }
-            if (correctLyric.indexOf(guess) === -1) {
+            if (correctLyric.indexOf(guess) === -1 && incorrectLetters.indexOf(guess) === -1) {
                 incorrect = guess; 
+                incorrectLetters.push(incorrect);
             }
             console.log("correctLetters Array: " + correctLetters);
             console.log("incorrect variable: " + incorrect);
