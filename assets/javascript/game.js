@@ -9,6 +9,7 @@ var losses = 0;
 var guessesRemain = 10;
 var correctLetters = [];
 var incorrectLetters = [];
+var incorrect;
 var wrongGuess = false; 
 var placeholder = [];
 var pressToPlay = false;
@@ -27,15 +28,13 @@ document.addEventListener("keyup", function() {
             for (var i = 0; i < correctLyric.length; i++) {
                 if (correctLyric[i] === guess) {
                     correctLetters[i] = guess;
-                } else {
-                    wrongGuess = true;
                 }
             }
-            if (wrongGuess) {
-                console.log("wrong guess")
-                wrongGuess = false; 
+            if (correctLyric.indexOf(guess) === -1) {
+                incorrect = guess; 
             }
             console.log("correctLetters Array: " + correctLetters);
+            console.log("incorrect variable: " + incorrect);
             console.log("incorrectLetters Array: " + incorrectLetters);
         } else {
             console.log("Please type 's' to Start")
