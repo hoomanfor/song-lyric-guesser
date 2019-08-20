@@ -1,5 +1,5 @@
 
-var lyrics = ["red", "green", "blue", "orange", "purple", "black", "blue", "yellow"];
+var lyrics = ["red", "green", "blue", "orange", "purple", "black", "blue", "yellow", "steamboat", "story", "song", "slider"];
 
 var correctLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
 console.log("correctLyric: " + correctLyric);
@@ -21,31 +21,29 @@ for (var j = 0; j < correctLyric.length; j++) {
 }
 
 document.addEventListener("keyup", function() {
-        var start = event.key.toLowerCase();
-        if (pressToPlay === true || start === "s") {
-            pressToPlay = true; 
-            var guess = event.key.toLowerCase();
+        var guess = event.key.toLowerCase();
+        if (event.keyCode >= 65 && event.keyCode <= 90) {
             for (var i = 0; i < correctLyric.length; i++) {
                 if (correctLyric[i] === guess) {
                     correctLetters[i] = guess;
                 }
             }
             if (correctLyric.indexOf(guess) === -1 && incorrectLetters.indexOf(guess) === -1) {
-                incorrect = guess; 
+                incorrect = guess;
+                guessesRemain = guessesRemain - 1; 
                 incorrectLetters.push(incorrect);
             }
             console.log("correctLetters Array: " + correctLetters);
             console.log("incorrect variable: " + incorrect);
             console.log("incorrectLetters Array: " + incorrectLetters);
-        } else {
-            console.log("Please type 's' to Start")
-        }
+            console.log("guessesRemain: " + guessesRemain) 
+    }
 })
 
 
 // hooman-20 (Intro to Nested For-loops)
 // hooman-22 (Intro to .split())
-// hooman-27 (Intro to functions, typeof, charAt()), indexof
+// hooman-27 (Intro to functions, typeof, .charAt(), .indexOf()
 
-//toLowerCase onto guess event.key
+// added counter for guesses remain
 
