@@ -10,15 +10,27 @@ var guessesRemain = 10;
 var correctLetters = [];
 var incorrectLetters = [];
 var incorrect;
-var wrongGuess = false; 
-var placeholder = [];
-var pressToPlay = false;
- 
+var numCorrect = 0; 
+
 var domPlaceholder = document.querySelector("#placeholder");
 
-for (var j = 0; j < correctLyric.length; j++) {
-    correctLetters.push(" - ");
+function newGame() {
+    correctLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
+    guessesRemain = 10;
+    correctLetters = [];
+    incorrectLetters = [];
+    console.log("correctLyric: " + correctLyric);
+    console.log("Wins: " + wins);
+    console.log("Losses: " + losses);
 }
+
+function setHyphens() {
+    for (var j = 0; j < correctLyric.length; j++) {
+        correctLetters.push(" - ");
+    }
+}
+
+setHyphens()
 
 document.addEventListener("keyup", function() {
         var guess = event.key.toLowerCase();
@@ -26,24 +38,30 @@ document.addEventListener("keyup", function() {
             for (var i = 0; i < correctLyric.length; i++) {
                 if (correctLyric[i] === guess) {
                     correctLetters[i] = guess;
-                }
+                } 
             }
             if (correctLyric.indexOf(guess) === -1 && incorrectLetters.indexOf(guess) === -1) {
                 incorrect = guess;
                 guessesRemain = guessesRemain - 1; 
                 incorrectLetters.push(incorrect);
+            } else if (guessesRemain === 0) {
+                losses = losses + 1;
+                newGame();
+                setHyphens();
+            }
+            if (correctLetters.indexOf(" - ") === -1) {
+                wins = wins + 1;
+                newGame();
+                setHyphens();
             }
             console.log("correctLetters Array: " + correctLetters);
             console.log("incorrect variable: " + incorrect);
             console.log("incorrectLetters Array: " + incorrectLetters);
-            console.log("guessesRemain: " + guessesRemain) 
+            console.log("guessesRemain: " + guessesRemain);
     }
 })
 
+// Vanilla Javascript methods to remember:
+// .split() - typeof - .charAt() - .indexOf() - nested for-loops
 
-// hooman-20 (Intro to Nested For-loops)
-// hooman-22 (Intro to .split())
-// hooman-27 (Intro to functions, typeof, .charAt(), .indexOf()
-
-// added counter for guesses remain
 
