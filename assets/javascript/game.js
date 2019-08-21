@@ -12,7 +12,7 @@ var incorrectLetters = [];
 var incorrect;
 var numCorrect = 0; 
 
-var domPlaceholder = document.querySelector("#placeholder");
+var domLyric = document.querySelector("#lyric");
 
 function newGame() {
     correctLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
@@ -55,6 +55,7 @@ document.addEventListener("keyup", function() {
                 newGame();
                 setHyphens();
             }
+            domLyric.innerHTML = correctLetters;
             console.log("correctLetters Array: " + correctLetters);
             console.log("incorrect variable: " + incorrect);
             console.log("incorrectLetters Array: " + incorrectLetters);
