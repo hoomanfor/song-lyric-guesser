@@ -44,7 +44,8 @@ document.addEventListener("keyup", function() {
                 incorrect = guess;
                 guessesRemain = guessesRemain - 1; 
                 incorrectLetters.push(incorrect);
-            } else if (guessesRemain === 0) {
+            }  
+            if (guessesRemain === 0) {
                 losses = losses + 1;
                 newGame();
                 setHyphens();
