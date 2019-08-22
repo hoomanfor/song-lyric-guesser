@@ -61,6 +61,24 @@ main {
     border-bottom: 1px solid #F2D8C9;
 }
 
+#incorrect-letters {
+    width: 60%;
+    float: left;
+    border: 1px solid black; 
+}
+
+#wins {
+    width: 20%;
+    float: right;
+    border: 1px solid black; 
+}
+
+#losses {
+    width: 20%;
+    float: right;
+    border: 1px solid black; 
+}
+
 /* Color Theme Swatches in Hex */
 .Wilderness-1-hex { color: #F2D8C9; }
 .Wilderness-2-hex { color: #260B01; }
