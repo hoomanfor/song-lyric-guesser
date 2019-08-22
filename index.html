@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Nanum+Gothic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -23,10 +24,22 @@
         <main>
             <section>
                 <h2>How do I play?</h2>
-                <p>To start, press any key from A to Z. By doing this, you have made your first guess. You have 9 more guesses left. Fill in the blanks and discover the lyric!</p>
+                <p>To start, press any key from A to Z. By doing this, you have made your first guess. You have <span id="guess-count">9</span> more guesses left. Fill in the blanks and discover the lyric!</p>
             </section>
             <section>
-                <p id="lyric" class="dom-lyric"></p>
+                <p id="lyric">
+                    "And I wanna be like water if I can 'Cause water doesn't give a damn."
+                    <br>
+                    David Berman
+                </p>
+            </section>
+            <section>
+                <p id="word"></p>
+            </section>
+            <section>
+                <div id="incorrect-letters">Incorrect Letters: </div>
+                <div id="wins">Wins: </div>
+                <div id="losses">Losses: </div>
             </section>
         </main>
         

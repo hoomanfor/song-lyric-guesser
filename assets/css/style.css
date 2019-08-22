@@ -38,10 +38,27 @@ main {
     overflow: hidden; 
 }
 
-.dom-lyric {
+#lyric {
+    text-align: center;
+    font-size: 22px; 
+    padding: 20px 0;  
+    border: 1px solid black; 
+    font-family: 'Indie Flower', cursive;
+}
+
+#word {
     text-align: center;
     padding: 20px 0;  
     border: 1px solid black; 
+    letter-spacing: 4px; 
+}
+
+#guess-count {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #73564C;
+    font-size: 20px; 
+    font-weight: bold;
+    border-bottom: 1px solid #F2D8C9;
 }
 
 /* Color Theme Swatches in Hex */
