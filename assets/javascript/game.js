@@ -1,8 +1,8 @@
 
 var lyrics = [
     ["And I wanna be like water if I can 'Cause water doesn't give a _ _ _ _.", "David Berman", "damn"],
-    ["My name is frank. I like to _ _ _ _.", "John Thunder", "dance"],
-    ["The color yellow is nice because I love _ _ _ _ _ _ _.", "Susan Storm", "flowers"]
+    ["My life at home every day. Drinking coke in a kitchen with a dog " + "<br>" + " who doesn't know his _ _ _ _.", "David Berman", "name"],
+    ['Boy wants a car from his dad. Dad says, "First you got to cut that hair." Boy says, "Hey dad, Jesus had long hair" And dad says, "That\'s right son, Jesus walked _ _ _ _ _ _ _ _ _ _."', "David Berman", "everywhere"]
 ]
 
 var randomIndex = Math.floor(Math.random() * lyrics.length);
@@ -30,6 +30,8 @@ var domArtist = document.querySelector("#artist");
 function newGame() {
     randomIndex = Math.floor(Math.random() * lyrics.length);
     correctLyric = lyrics[randomIndex][2];
+    completeLyric = lyrics[randomIndex][0];
+    artist = lyrics[randomIndex][1];
     guessesRemain = 10;
     domGuessCount.innerHTML = 10;
     correctLetters = [];
