@@ -14,7 +14,9 @@ var numCorrect = 0;
 
 var domWord = document.querySelector("#word");
 var domGuessCount = document.querySelector("#guess-count");
-
+var domWins = document.querySelector("#wins");
+var domLosses = document.querySelector("#losses");
+var domIncorrectLetters = document.querySelector("#incorrect-letters");
 
 function newGame() {
     correctLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
@@ -35,7 +37,6 @@ function setHyphens() {
 }
 
 setHyphens()
-domWord.innerHTML = correctLetters.join("");
 
 document.addEventListener("keyup", function() {
         var guess = event.key.toLowerCase();
@@ -55,21 +56,18 @@ document.addEventListener("keyup", function() {
             }  
             if (guessesRemain === 0) {
                 losses = losses + 1;
+                domLosses.innerHTML = "Losses: " + losses;
                 newGame();
                 setHyphens();
             }
             if (correctLetters.indexOf(" _ ") === -1) {
                 wins = wins + 1;
+                domWins.innerHTML = "Wins: " + wins;
                 newGame();
                 setHyphens();
             }
-
             domWord.innerHTML = correctLetters.join("");
-
-            console.log("correctLetters Array: " + correctLetters);
-            console.log("incorrect variable: " + incorrect);
-            console.log("incorrectLetters Array: " + incorrectLetters);
-            console.log("guessesRemain: " + guessesRemain);
+            domIncorrectLetters.innerHTML = incorrectLetters.join("");
     }
 })
 
