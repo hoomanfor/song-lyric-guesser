@@ -38,12 +38,11 @@ main {
     overflow: hidden; 
 }
 
-#lyric {
+.lyric {
     text-align: center;
     font-size: 22px; 
     padding: 20px 0;  
     border: 1px solid black; 
-    font-family: 'Indie Flower', cursive;
 }
 
 #word {

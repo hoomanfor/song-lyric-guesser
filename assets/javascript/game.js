@@ -1,7 +1,14 @@
 
-var lyrics = ["red", "green", "blue", "orange", "purple", "black", "blue", "yellow", "steamboat", "story", "song", "slider"];
+var lyrics = [
+    ["And I wanna be like water if I can 'Cause water doesn't give a _ _ _ _.", "David Berman", "damn"],
+    ["My name is frank. I like to _ _ _ _.", "John Thunder", "dance"],
+    ["The color yellow is nice because I love _ _ _ _ _ _ _.", "Susan Storm", "flowers"]
+]
 
-var correctLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
+var randomIndex = Math.floor(Math.random() * lyrics.length);
+var correctLyric = lyrics[randomIndex][2];
+var completeLyric = lyrics[randomIndex][0];
+var artist = lyrics[randomIndex][1];
 console.log("correctLyric: " + correctLyric);
 
 var wins = 0;
@@ -17,11 +24,14 @@ var domGuessCount = document.querySelector("#guess-count");
 var domWins = document.querySelector("#wins");
 var domLosses = document.querySelector("#losses");
 var domIncorrectLetters = document.querySelector("#incorrect-letters");
+var domLyric = document.querySelector("#complete-lyric");
+var domArtist = document.querySelector("#artist");
 
 function newGame() {
-    correctLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
+    randomIndex = Math.floor(Math.random() * lyrics.length);
+    correctLyric = lyrics[randomIndex][2];
     guessesRemain = 10;
-    domGuessCount.innerHTML = 9;
+    domGuessCount.innerHTML = 10;
     correctLetters = [];
     incorrectLetters = [];
     console.log("correctLyric: " + correctLyric);
@@ -36,7 +46,14 @@ function setHyphens() {
     }
 }
 
-setHyphens()
+function setLyricAndArtist() {
+    domLyric.innerHTML = completeLyric;
+    domArtist.innerHTML = artist;
+}
+
+setLyricAndArtist();
+
+setHyphens();
 
 document.addEventListener("keyup", function() {
         var guess = event.key.toLowerCase();
@@ -44,8 +61,6 @@ document.addEventListener("keyup", function() {
             for (var i = 0; i < correctLyric.length; i++) {
                 if (correctLyric[i] === guess) {
                     correctLetters[i] = guess;
-                    guessesRemain = guessesRemain - 1;
-                    domGuessCount.innerHTML = guessesRemain; 
                 } 
             }
             if (correctLyric.indexOf(guess) === -1 && incorrectLetters.indexOf(guess) === -1) {
@@ -58,12 +73,14 @@ document.addEventListener("keyup", function() {
                 losses = losses + 1;
                 domLosses.innerHTML = "Losses: " + losses;
                 newGame();
+                setLyricAndArtist();
                 setHyphens();
             }
             if (correctLetters.indexOf(" _ ") === -1) {
                 wins = wins + 1;
                 domWins.innerHTML = "Wins: " + wins;
                 newGame();
+                setLyricAndArtist();
                 setHyphens();
             }
             domWord.innerHTML = correctLetters.join("");
@@ -73,5 +90,8 @@ document.addEventListener("keyup", function() {
 
 // Vanilla Javascript methods to remember:
 // .split() - typeof - .charAt() - .indexOf() - nested for-loops
+
+
+
 
 
