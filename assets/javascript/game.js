@@ -1,15 +1,15 @@
 
 var lyrics = [
     ["And I wanna be like water if I can 'Cause water doesn't give a _ _ _ _.", "David Berman", "damn"],
-    ["My life at home every day. Drinking coke in a kitchen with a dog <br> who doesn't know his _ _ _ _.", "David Berman", "name"],
-    ['Boy wants a car from his dad. Dad says, "First you got to cut that hair." Boy says, "Hey dad, Jesus had long hair" And dad says, <br> "That\'s right son, Jesus walked _ _ _ _ _ _ _ _ _ _."', "David Berman", "everywhere"],
-    ["The leafless tree looked like a brain. The birds within were all the <br> thoughts and _ _ _ _ _ _ _ within me.", "Bill Callahan", "desires"],
+    ["My life at home every day. Drinking coke in a kitchen with a dog who doesn't know his <br> _ _ _ _.", "David Berman", "name"],
+    ['Boy wants a car from his dad. Dad says,<br> "First you got to cut that hair." <br> Boy says,<br> "Hey dad, Jesus had long hair" <br> And dad says, <br> "That\'s right son,<br> Jesus walked _ _ _ _ _ _ _ _ _ _."', "David Berman", "everywhere"],
+    ["The leafless tree looked like a brain. The birds within were all the thoughts <br> and _ _ _ _ _ _ _ within me.", "Bill Callahan", "desires"],
     ['The only words I\'ve said today are "_ _ _ _" and "thank you"', "Bill Callahan", "beer"],
     ['Punk rock died when the first kid said, "Punk\'s not _ _ _ _, punk\'s not dead"', "David Berman", "dead"],
     ["I have not avoided certainty. It has always just _ _ _ _ _ _ me.", "David Berman", "eluded"],
-    ["Call me from Albemarle Station if you can. <br> I hope you find your _ _ _ _ _ _ _ _ _ _ _ _ _ beneath those ceiling fans.", "David Berman", "concentration"],
-    ['The elephants are so ashamed of their size. Hosing \'em down, I tell them "you got pretty _ _ _ _."', "David Berman", "eyes"],
-    ["All my favorite singers couldn't _ _ _ _.", "David Berman", "sing"]
+    ["Call me from Albemarle Station if you can. I hope you find your <br> _ _ _ _ _ _ _ _ _ _ _ _ _ , <br> beneath those ceiling fans.", "David Berman", "concentration"],
+    ['The elephants are so ashamed of their size. <br> Hosing \'em down, I tell them, <br> "you got pretty _ _ _ _."', "David Berman", "eyes"],
+    ["All my favorite singers couldn't <br> _ _ _ _.", "David Berman", "sing"]
 ]
 
 var randomIndex = Math.floor(Math.random() * lyrics.length);
