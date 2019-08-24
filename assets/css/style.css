@@ -4,57 +4,93 @@
 
 body {
     font-family: 'Nanum Gothic', sans-serif;
+    background-image: url("../images/prism.png");
     color: #260B01;
-    font-size: 18px; 
+    font-size: 18px;
+    
 }
 
 header {
-    width: 960px; 
+    width: 960px;
+    background-image: url("../images/prism.png");
     margin: 0 auto;
-    border: 1px solid black;
+    padding-top: 10px; 
     text-align: center;
     overflow: hidden; 
+    border-bottom: 1px solid #F2D8C9; 
 }
 
 h1 {
-    border: 1px dashed black;
     font-family: 'Amatic SC', cursive;
-    background-color: #F2D8C9;
-    display: inline;
-    font-size: 38px; 
+    background-image: url("../images/prism.png");
+    color: #F2D8C9;
+    display: inline-block;
+    padding: 10px;
+    font-size: 42px;
+    border-left: 2px dashed #F2D8C9; 
+    border-right: 2px dashed #F2D8C9;
 }
 
 h2 {
     font-size: 22px;
-    border-bottom: 1px solid #D9BEB4;
-    display: inline; 
+    color: #F2D8C9;
+    padding-top: 10px;
+    border-bottom: 1px solid #F2D8C9;
+    display: inline-block; 
 }
 
 main {
     width: 960px; 
-    margin: 0 auto;
+    background-image: url("../images/prism.png");
+    color: #F2D8C9;
+    margin: 10px auto;
+    padding: 0 10px 0 10px; 
     border: 1px solid black;
     line-height: 150%;
     overflow: hidden; 
 }
 
-.lyric {
-    text-align: center;
-    font-size: 22px; 
-    padding: 20px 0;  
-    border: 1px solid black; 
+.instructions {
+    background-color: #260B01;
+    padding: 10px; 
+    border-left: 1px solid #F2D8C9;
+    border-bottom: 1px solid #F2D8C9;
 }
 
-#word {
+.lyric {
     text-align: center;
-    padding: 20px 0;  
-    border: 1px solid black; 
-    letter-spacing: 4px; 
+    background-color: #F2D8C9;
+    color: #260B01;
+    margin-top: 10px;
+    font-size: 22px; 
+    padding: 20px;  
+}
+
+.artist {
+    font-size: 18px; 
+    padding-top: 10px;
+    font-style: italic; 
+    display: inline-block; 
+}
+
+.word {
+    text-align: center; 
+    letter-spacing: 2px; 
+    padding: 0;
+}
+
+.emphasis-word {
+    background-color: #260B01;
+    font-size: 22px; 
+    display: inline-block; 
+    padding: 20px 20px 10px 20px;
+    border-left: 2px dashed #F2D8C9; 
+    border-right: 2px dashed #F2D8C9;
 }
 
 #guess-count {
     font-family: Helvetica, Arial, sans-serif;
-    color: #73564C;
+    color: #F2D8C9;
     font-size: 20px; 
     font-weight: bold;
     border-bottom: 1px solid #F2D8C9;
