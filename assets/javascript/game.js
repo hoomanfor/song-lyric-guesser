@@ -64,7 +64,7 @@ setLyricAndArtist();
 
 setHyphens();
 
-document.addEventListener("keyup", function() {
+window.addEventListener("keyup", function() {
         var guess = event.key.toLowerCase();
         if (event.keyCode >= 65 && event.keyCode <= 90) {
             for (var i = 0; i < correctLyric.length; i++) {
