@@ -2,7 +2,7 @@
 var lyrics = [
     ["And I wanna be like water if I can 'Cause water doesn't give a _ _ _ _.", "David Berman", "damn"],
     ["My life at home every day. Drinking coke in a kitchen with a dog <br> who doesn't know his _ _ _ _.", "David Berman", "name"],
-    ['Boy wants a car from his dad. Dad says, "First you got to cut that hair." Boy says, "Hey dad, Jesus had long hair" And dad says, "That\'s right son, Jesus walked _ _ _ _ _ _ _ _ _ _."', "David Berman", "everywhere"],
+    ['Boy wants a car from his dad. Dad says, "First you got to cut that hair." Boy says, "Hey dad, Jesus had long hair" And dad says, <br> "That\'s right son, Jesus walked _ _ _ _ _ _ _ _ _ _."', "David Berman", "everywhere"],
     ["The leafless tree looked like a brain. The birds within were all the <br> thoughts and _ _ _ _ _ _ _ within me.", "Bill Callahan", "desires"],
     ['The only words I\'ve said today are "_ _ _ _" and "thank you"', "Bill Callahan", "beer"],
     ['Punk rock died when the first kid said, "Punk\'s not _ _ _ _, punk\'s not dead"', "David Berman", "dead"],

@@ -35,8 +35,8 @@ h2 {
     font-size: 22px;
     color: #F2D8C9;
     padding-top: 10px;
-    border-bottom: 1px solid #F2D8C9;
-    display: inline-block; 
+    border-bottom: 2px solid #F2D8C9;
+    display: inline-block;
 }
 
 main {
@@ -45,7 +45,6 @@ main {
     color: #F2D8C9;
     margin: 10px auto;
     padding: 0 10px 0 10px; 
-    border: 1px solid black;
     line-height: 150%;
     overflow: hidden; 
 }
@@ -54,12 +53,13 @@ main {
     background-color: #260B01;
     padding: 10px; 
     border-left: 1px solid #F2D8C9;
-    border-bottom: 1px solid #F2D8C9;
+    border-bottom: 2px solid #F2D8C9;
 }
 
 .lyric {
     text-align: center;
     background-color: #F2D8C9;
+    border: 2px solid #260B01;
     color: #260B01;
     margin-top: 10px;
     font-size: 22px; 
@@ -75,8 +75,9 @@ main {
 
 .word {
     text-align: center; 
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
     padding: 0;
+    border-bottom: 1px solid #F2D8C9; 
 }
 
 .emphasis-word {
@@ -96,26 +97,36 @@ main {
     border-bottom: 1px solid #F2D8C9;
 }
 
-#incorrect-letters {
-    letter-spacing: 4px; 
+.metrics {
+    font-size: 20px; 
 }
 
 .incorrect-letters {
     width: 60%;
     float: left;
-    border: 1px solid black; 
+    padding: 0 10px 10px 10px; 
 }
 
-#wins {
-    width: 20%;
-    float: left;
-    border: 1px solid black; 
+.incorrect-letters-emphasis {
+    letter-spacing: 4px;
+    font-size: 22px;
+    font-weight: bold; 
 }
 
-#losses {
+.wins {
     width: 20%;
     float: left;
-    border: 1px solid black; 
+    text-align: right; 
+    padding: 0 10px 10px 10px; 
+    font-weight: bold;
+}
+
+.losses {
+    width: 20%;
+    float: left;
+    text-align: right; 
+    padding: 0 10px 10px 10px; 
+    font-weight: bold;
 }
 
 /* Color Theme Swatches in Hex */
